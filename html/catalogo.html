@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BinaryShop - Catálogo</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="catalogo.html">Binary<span>Shop</span></a>
+    <a class="enlace" href="catalogo.html">Catálogo</a>
+    <a class="enlace" href="compras.html">Mis compras</a>
+
+    <div class="carrito-wrap">
+      <button type="button" id="btn-carrito">🛒 Carrito <span id="carrito-contador" class="badge">0</span></button>
+      <div id="carrito-panel" class="desplegable" hidden></div>
+    </div>
+
+    <span id="usuario-nombre" class="usuario"></span>
+    <button type="button" id="btn-salir" class="sec">Salir</button>
+  </header>
+
+  <main class="contenedor">
+    <h2>Catálogo</h2>
+    <input type="search" id="buscador" class="buscador" placeholder="Buscar productos…">
+    <div id="rejilla" class="rejilla"></div>
+    <p id="vacio" class="vacio" hidden>No hay productos para mostrar.</p>
+  </main>
+
+  <!-- Tarjeta de producto -->
+  <template id="tpl-producto">
+    <article class="card producto">
+      <img alt="">
+      <h3></h3>
+      <p class="desc"></p>
+      <div class="precio"></div>
+      <div class="vend"></div>
+      <div class="acciones">
+        <button type="button" class="sec" data-accion="carrito">Añadir al carrito</button>
+        <button type="button" class="ok" data-accion="comprar">Comprar de inmediato</button>
+      </div>
+    </article>
+  </template>
+
+  <!-- Formulario de pago -->
+  <dialog id="dlg-pago">
+    <form id="form-pago">
+      <h3>Pago</h3>
+      <div id="pago-resumen"></div>
+      <div class="total"><span>Total</span><span id="pago-total"></span></div>
+
+      <label for="titular">Titular de la tarjeta</label>
+      <input id="titular" name="titular" required>
+
+      <label for="numero">Número de tarjeta (16 dígitos)</label>
+      <input id="numero" name="numero" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
+
+      <div class="fila">
+        <div><label for="vence">Vence (MM/AA)</label><input id="vence" name="vence" placeholder="08/28" required></div>
+        <div><label for="cvv">CVV</label><input id="cvv" name="cvv" type="password" maxlength="4" required></div>
+      </div>
+
+      <button type="submit" class="ok">Pagar</button>
+      <button type="button" id="btn-cancelar-pago" class="sec" style="margin-top:.5rem;width:100%">Cancelar</button>
+    </form>
+  </dialog>
+
+  <script src="../js/clases.js"></script>
+  <script src="../js/comun.js"></script>
+  <script src="../js/catalogo.js"></script>
+</body>
+</html>

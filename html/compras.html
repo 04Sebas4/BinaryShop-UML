@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BinaryShop - Mis compras</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="catalogo.html">Binary<span>Shop</span></a>
+    <a class="enlace" href="catalogo.html">Catálogo</a>
+    <a class="enlace" href="compras.html">Mis compras</a>
+    <span id="usuario-nombre" class="usuario"></span>
+    <button type="button" id="btn-salir" class="sec">Salir</button>
+  </header>
+
+  <main class="contenedor">
+    <h2>Mis compras</h2>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Fecha</th><th>Productos</th><th>Total</th><th>Estado</th><th>Tarjeta</th></tr></thead>
+        <tbody id="cuerpo"></tbody>
+      </table>
+    </div>
+    <p id="vacio" class="vacio" hidden>Aún no has comprado nada.</p>
+  </main>
+
+  <script src="../js/clases.js"></script>
+  <script src="../js/comun.js"></script>
+  <script src="../js/compras.js"></script>
+</body>
+</html>

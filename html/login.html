@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BinaryShop - Iniciar sesión</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="card auth">
+      <h2>BinaryShop</h2>
+      <h3>Iniciar sesión</h3>
+
+      <form id="form-login">
+        <label for="nickname">Nickname</label>
+        <input id="nickname" name="nickname" required>
+
+        <label for="contrasena">Contraseña</label>
+        <input id="contrasena" name="contrasena" type="password" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="nota">¿No tienes cuenta?</p>
+      <a class="btn sec" href="registro.html" style="display:block;text-align:center;text-decoration:none">Crear cuenta</a>
+      <div class="demo">
+        Cuentas de prueba: <b>comprador / 1234</b> · <b>vendedor / 1234</b> · <b>admin / admin123</b>      </div>
+    </section>
+  </main>
+
+  <script src="../js/clases.js"></script>
+  <script src="../js/comun.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>

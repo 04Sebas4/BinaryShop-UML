@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BinaryShop - Panel de vendedor</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="vendedor.html">Binary<span>Shop</span></a>
+    <a class="enlace" href="vendedor.html">Panel de vendedor</a>
+    <span id="usuario-nombre" class="usuario"></span>
+    <button type="button" id="btn-salir" class="sec">Salir</button>
+  </header>
+
+  <main class="contenedor">
+    <h2>Panel de vendedor</h2>
+    <div class="dos-col">
+      <form id="form-producto" class="card">
+        <h3>Publicar producto</h3>
+
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" required>
+
+        <label for="descripcion">Descripción</label>
+        <input id="descripcion" name="descripcion">
+
+        <label for="precio">Precio ($)</label>
+        <input id="precio" name="precio" type="number" min="0.01" step="0.01" required>
+
+        <label for="imagen">Imagen</label>
+        <input id="imagen" type="file" accept="image/*" required>
+        <img id="vista-previa" class="miniatura" alt="Vista previa" hidden>
+
+        <button type="submit">Publicar</button>
+      </form>
+
+      <div>
+        <div class="card">
+          <h3 id="titulo-productos">Mis productos</h3>
+          <div class="tabla-wrap"><table><tbody id="mis-productos"></tbody></table></div>
+          <p id="sin-productos" class="vacio" hidden>Sin productos publicados.</p>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <h3 id="titulo-ventas">Historial de ventas</h3>
+          <div class="tabla-wrap">
+            <table>
+              <thead><tr><th>Fecha</th><th>Producto</th><th>Cant.</th><th>Total</th><th>Comprador</th></tr></thead>
+              <tbody id="historial"></tbody>
+            </table>
+          </div>
+          <p id="sin-ventas" class="vacio" hidden>Aún no tienes ventas.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/clases.js"></script>
+  <script src="../js/comun.js"></script>
+  <script src="../js/vendedor.js"></script>
+</body>
+</html>

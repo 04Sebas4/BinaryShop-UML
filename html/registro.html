@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BinaryShop - Registro</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="card auth">
+      <h2>BinaryShop</h2>
+      <h3>Registro de usuario</h3>
+
+      <form id="form-registro">
+        <div class="fila">
+          <div><label for="nombre">Nombre</label><input id="nombre" name="nombre" required></div>
+          <div><label for="apellido">Apellido</label><input id="apellido" name="apellido" required></div>
+        </div>
+
+        <label for="direccion">Dirección</label>
+        <input id="direccion" name="direccion" required>
+
+        <div class="fila">
+          <div><label for="nickname">Nickname</label><input id="nickname" name="nickname" required></div>
+          <div><label for="contrasena">Contraseña</label><input id="contrasena" name="contrasena" type="password" required></div>
+        </div>
+
+        <label for="datosBancarios">Datos bancarios (banco y nº de cuenta)</label>
+        <input id="datosBancarios" name="datosBancarios" required>
+
+        <label for="rol">Rol</label>
+        <select id="rol" name="rol">
+          <option value="comprador">Comprador</option>
+          <option value="vendedor">Vendedor</option>
+        </select>
+
+        <button type="submit">Registrarme</button>
+      </form>
+
+      <p class="nota">
+        Si ya eres comprador y quieres vender, usa este mismo formulario con tu nickname y contraseña
+        eligiendo “Vendedor”: tu cuenta pasará a ser de vendedor.
+      </p>
+      <p class="nota">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </section>
+  </main>
+
+  <script src="../js/clases.js"></script>
+  <script src="../js/comun.js"></script>
+  <script src="../js/registro.js"></script>
+</body>
+</html>
